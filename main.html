@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+<section class="header px-0"><!--section starts-->
+  <div class="container-fluid px-0 b">
+      <nav class="navbar navbar-expand-lg navbar-light  px-0 "><!--navbar starts-->
+        <a class="navbar-brand" href="#"><img  src="logorfc.png" alt="logorfc" width="90" height="90"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto text-right mr-5">
+              <a class="nav-item nav-link active-home px-4 mr-2" href="main.html">HOME</a>
+              <a class="nav-item nav-link px-4 mr-2" href="gallery.html">GALLERY</a>
+              <a class="nav-item nav-link px-4 mr-2" href="#contact">CONTACT US</a>
+            </div>
+          </div>
+        </nav><!--navbarends-->
+    </div>
+  </section><!--section ends-->
+
+  <div class="hero-image"> <!--image and enrollment link Starts-->
+    <div class="hero-text">
+      <h1 style="font-size:50px">CHASE YOUR DREAM</h1>
+      
+      <button type="button" class="btn btn-success btn-lg"  data-target="#mymodal" data-toggle="modal">Enroll Now</button><!--button-->
+    </div>
+  </div>
+<div class="modal" id="mymodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="text-primary  ">PERSONAL </h3>
+        <button type="button btn-lg " class="close" data-dismiss="modal">&times;</button>
+       </div>
+       <!--- form starts-->
+       <form class="needs-validation" novalidate>
+          <div class="form-group">
+            <div class="col-lg mb-3">
+              <label for="validationCustom01">First name</label>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="First Name" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-lg mb-3">
+              <label for="validationCustom02">Last name</label>
+              <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Last Name" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-lg mb-3">
+              <label for="validationCustomUsername">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                </div>
+                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row pl-3">
+            <div class="col-lg-6 mb-3 ">
+              <label for="validationCustom03">City</label>
+              <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="col-lg-3 mb-3">
+              <label for="validationCustom04">State</label>
+              <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+            <div class="col-lg-3 mb-3">
+              <label for="validationCustom05">Zip</label>
+              <input type="number" class="form-control" id="validationCustom05" placeholder="Zip" required>
+              <div class="invalid-feedback">
+                Please provide a valid zip.
+              </div>
+            </div>
+          </div>
+          <div class="form-group pl-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="text-center mb-3"><button class="btn btn-primary" type="submit">Submit Now</button></div>
+        </form>
+        
+        <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script><!--form validation ends-->
+    </div>
+  </div>
+</div>
+  <!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4" id="contact">
+
+  <!-- Footer Elements -->
+  <div class="container">
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Address</h5>
+        <address class="text-muted">
+          Ramanthapur Football Club <a href="ramanthapurfc@gmail.com">RFC</a>.<br> 
+          Visit us at:<br>
+          Governament Polytechnic College<br>
+          Ramanthapur<br>
+          Hyderabad
+          </address>
+
+      </div>
+      <div class="col-md-6 mt-md-0 mt-3">
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-right">
+      <li class="list-inline-item pr-3">
+        <a href="https://www.facebook.com/RamanthapurFC/">
+        
+          <i class="fab fa-facebook-f "> </i>
+        </a>
+      </li>
+      <li class="list-inline-item pr-3">
+        <a href="https://www.instagram.com/ramanthapur_fc/"
+          <i class="fab fa-instagram"></i>
+      </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+    </div>
+</div>
+  </div>
+  <!-- Footer Elements -->
+
+
+</footer>
+<!-- Footer -->
+  
+</body>
+</html>
